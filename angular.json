@@ -13,24 +13,24 @@
           "style": "scss"
         }
       },
-      "root": "projects/template",
-      "sourceRoot": "projects/template/src",
+      "root": "projects/mtn-alpha",
+      "sourceRoot": "projects/mtn-alpha/src",
       "prefix": "hostiles",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/template",
-            "index": "projects/template/src/index.html",
-            "browser": "projects/template/src/main.ts",
+            "outputPath": "dist/mtn-alpha",
+            "index": "projects/mtn-alpha/src/index.html",
+            "browser": "projects/mtn-alpha/src/main.ts",
             "polyfills": ["zone.js"],
-            "tsConfig": "projects/template/tsconfig.app.json",
+            "tsConfig": "projects/mtn-alpha/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "projects/template/src/favicon.ico",
-              "projects/template/src/assets"
+              "projects/mtn-alpha/src/favicon.ico",
+              "projects/mtn-alpha/src/assets"
             ],
-            "styles": ["projects/template/src/styles.scss"],
+            "styles": ["projects/mtn-alpha/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -79,13 +79,13 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "polyfills": ["zone.js", "zone.js/testing"],
-            "tsConfig": "projects/template/tsconfig.spec.json",
+            "tsConfig": "projects/mtn-alpha/tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "projects/template/src/favicon.ico",
-              "projects/template/src/assets"
+              "projects/mtn-alpha/src/favicon.ico",
+              "projects/mtn-alpha/src/assets"
             ],
-            "styles": ["projects/template/src/styles.scss"],
+            "styles": ["projects/mtn-alpha/src/styles.scss"],
             "scripts": []
           }
         },
@@ -93,8 +93,8 @@
           "builder": "@angular-eslint/builder:lint",
           "options": {
             "lintFilePatterns": [
-              "projects/template/**/*.ts",
-              "projects/template/**/*.html"
+              "projects/mtn-alpha/**/*.ts",
+              "projects/mtn-alpha/**/*.html"
             ]
           }
         }
