@@ -1,5 +1,5 @@
 {
-  "name": "mtn-workspace",
+  "name": "template-workspace",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -10,15 +10,15 @@
     "ci": "ng lint && ng test && ng build",
     "format:test": "prettier --list-different \"./projects/**/*.{ts,html,scss,json}\"",
     "format:write": "prettier --write \"./projects/**/*.{ts,html,scss,json}\"",
-    "analyze": "ng build --stats-json --output-hashing=none --named-chunks && esbuild-visualizer --mtn-alpha treemap --metadata dist/mtn-alpha/stats.json --filename dist/mtn-alpha/analyse/index.html  && http-server -o -c-1 ./dist/mtn-alpha/analyse/",
-    "analyze:sme": "ng build --source-map --output-hashing=none --named-chunks && source-map-explorer dist/mtn-alpha/browser/*.js --html dist/mtn-alpha/sme/index.html && http-server -o -c-1 ./dist/mtn-alpha/sme/",
+    "analyze": "ng build --stats-json --output-hashing=none --named-chunks && esbuild-visualizer --template treemap --metadata dist/template/stats.json --filename dist/template/analyse/index.html  && http-server -o -c-1 ./dist/template/analyse/",
+    "analyze:sme": "ng build --source-map --output-hashing=none --named-chunks && source-map-explorer dist/template/browser/*.js --html dist/template/sme/index.html && http-server -o -c-1 ./dist/template/sme/",
     "analyze:deps": "npm-run-all analyze:deps:*",
-    "analyze:deps:all": "madge projects/mtn-alpha/src/main.ts --ts-config tsconfig.json --image ./deps/mtn-alpha/_all.png",
-    "analyze:deps:ui": "madge  --extensions ts --ts-config tsconfig.json --image ./deps/mtn-alpha/ui.png projects/mtn-alpha/src/app/ui/",
-    "analyze:deps:pattern": "madge  --extensions ts --ts-config tsconfig.json --image ./deps/mtn-alpha/pattern.png projects/mtn-alpha/src/app/pattern/",
-    "analyze:deps:feature": "madge  --extensions ts --ts-config tsconfig.json --image ./deps/mtn-alpha/feature.png projects/mtn-alpha/src/app/feature/",
-    "analyze:deps:layout": "madge  --extensions ts --ts-config tsconfig.json --image ./deps/mtn-alpha/layout.png projects/mtn-alpha/src/app/layout/",
-    "analyze:deps:core": "madge  --extensions ts --ts-config tsconfig.json --image ./deps/mtn-alpha/core.png projects/mtn-alpha/src/app/core/"
+    "analyze:deps:all": "madge projects/template/src/main.ts --ts-config tsconfig.json --image ./deps/template/_all.png",
+    "analyze:deps:ui": "madge  --extensions ts --ts-config tsconfig.json --image ./deps/template/ui.png projects/template/src/app/ui/",
+    "analyze:deps:pattern": "madge  --extensions ts --ts-config tsconfig.json --image ./deps/template/pattern.png projects/template/src/app/pattern/",
+    "analyze:deps:feature": "madge  --extensions ts --ts-config tsconfig.json --image ./deps/template/feature.png projects/template/src/app/feature/",
+    "analyze:deps:layout": "madge  --extensions ts --ts-config tsconfig.json --image ./deps/template/layout.png projects/template/src/app/layout/",
+    "analyze:deps:core": "madge  --extensions ts --ts-config tsconfig.json --image ./deps/template/core.png projects/template/src/app/core/"
   },
   "private": true,
   "dependencies": {
