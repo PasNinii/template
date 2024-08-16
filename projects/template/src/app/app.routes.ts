@@ -1,8 +1,11 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './feature/home/home.component';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
-  { path: 'home', component: HomeComponent },
+  {
+    path: 'home',
+    title: 'Home',
+    loadChildren: () => import('./feature/home/home.routes'),
+  },
   { path: '**', redirectTo: '' },
 ];
