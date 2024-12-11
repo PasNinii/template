@@ -1,11 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'hostiles-home',
-  standalone: true,
-  imports: [],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'hostiles-home',
+    imports: [],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent {}
