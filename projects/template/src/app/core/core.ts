@@ -1,4 +1,4 @@
-import { ENVIRONMENT_INITIALIZER } from '@angular/core';
+import { ENVIRONMENT_INITIALIZER, provideExperimentalZonelessChangeDetection } from '@angular/core';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {
   Routes,
@@ -15,6 +15,7 @@ export interface CoreOptions {
 
 export function provideCore({ routes }: CoreOptions) {
   return [
+    provideExperimentalZonelessChangeDetection(),
     provideAnimationsAsync(),
     provideRouter(
       routes,
