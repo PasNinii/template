@@ -1,4 +1,7 @@
-import { ENVIRONMENT_INITIALIZER, provideExperimentalZonelessChangeDetection } from '@angular/core';
+import {
+  provideAppInitializer,
+  provideExperimentalZonelessChangeDetection,
+} from '@angular/core';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {
   Routes,
@@ -27,18 +30,8 @@ export function provideCore({ routes }: CoreOptions) {
         scrollPositionRestoration: 'enabled',
       }),
     ),
-    // other 3rd party libraries
-
-    // other application specific providers & setup
-
-    // perform initilization, has to be last
-    {
-      provide: ENVIRONMENT_INITIALIZER,
-      multi: true,
-      useValue() {
-        // add init logic here
-        // kickstart processes, trigger initial requests or actions
-      },
-    },
+    provideAppInitializer(() => {
+      // init app logic
+    }),
   ];
 }
