@@ -1,6 +1,6 @@
 import {
   provideAppInitializer,
-  provideExperimentalZonelessChangeDetection,
+  provideZonelessChangeDetection,
 } from '@angular/core';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {
@@ -18,7 +18,7 @@ export interface CoreOptions {
 
 export function provideCore({ routes }: CoreOptions) {
   return [
-    provideExperimentalZonelessChangeDetection(),
+    provideZonelessChangeDetection(),
     provideAnimationsAsync(),
     provideRouter(
       routes,
